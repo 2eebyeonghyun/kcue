@@ -1,0 +1,622 @@
+@import "./_variables";
+
+// 국문 푸터 영역
+.kr_footer {
+    width: 100%;
+    height: 115px;
+    background-color: #fff;
+    border-top: 1px solid #f5f5f5;
+
+    .w1300 {
+        @include w1300;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .fot_banner_wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .swiper-options {
+            width: calc(100% - 1160px);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .swiper-arrows {
+                width: 90px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    position: relative;
+                    top: 0;
+                    margin-top: 0;
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid #e3e3e3;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                .swiper-button-prev {
+                    border-right: 0;
+                }
+
+                .swiper-button-prev,
+                .swiper-rtl .swiper-button-next {
+                    left: 0;
+                    right: 0;
+                }
+
+                .swiper-button-next,
+                .swiper-rtl .swiper-button-prev {
+                    left: 0;
+                    right: 0;
+                }
+
+                .swiper-button-next.swiper-button-disabled,
+                .swiper-button-prev.swiper-button-disabled {
+                    opacity: 1;
+                }
+            }
+
+            .swiper-auto {
+                width: 45px;
+                height: 45px;
+                border: 1px solid #e3e3e3;
+                border-left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .slideBtn {
+                    display: none;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+                    padding: 0;
+
+                    i {
+                        font-size: 18px;
+                        color: #000;
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .fotBannerSwiper {
+            width: 1130px;
+            margin-left: 30px;
+
+            .swiper-wrapper{
+                align-items: center;
+            }
+
+            .swiper-slide {
+                height: 63px;
+
+                > a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+
+                    img {
+                        object-fit: scale-down;
+                    }
+                }
+            }
+        }
+    }
+
+    .contents {
+        margin-top: 0 !important;
+
+        .top {
+            width: 100%;
+            height: 60px;
+            background-color: #ccc;
+
+            .w1300 {
+                @include w1300;
+                height: 100%;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+
+                > li {
+                    position: relative;
+                    margin-right: 30px;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: -15px;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 70%;
+                        background-color: #898989;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    > a {
+                        font-family: $f400;
+                        font-size: 16px;
+                        line-height: 1.3;
+                        color: #6b6b6b;
+                        display: block;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            font-family: $f800;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bot {
+            width: 100%;
+            background-color: #1f293d;
+            padding: 40px 0 60px;
+
+            .w1300 {
+                @include w1300;
+                height: 100%;
+            }
+
+            .topwrap {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 40px;
+
+                .logo {
+                    width: 240px;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+
+                .telbox {
+                    position: relative;
+                    padding-left: 15px;
+                    margin-left: 15px;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 100%;
+                        background-color: #fff;
+                    }
+
+                    .title {
+                        font-family: $f400;
+                        font-size: 13px;
+                        line-height: 1.3;
+                        color: #fff;
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+
+                    a {
+                        font-family: $f800;
+                        font-size: 17px;
+                        line-height: 1.3;
+                        color: #fff;
+                        display: block;
+                    }
+                }
+            }
+
+            .botwrap {
+
+                .list {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin-bottom: 30px;
+
+                    li {
+                        font-family: $f400;
+                        font-size: 14px;
+                        line-height: 1.3;
+                        color: #fff;
+                        margin-right: 20px;
+
+                        &.w100 {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            margin-right: 0;
+                        }
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .copyright {
+                    width: 100%;
+                    font-family: $f400;
+                    font-size: 14px;
+                    line-height: 1.3;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// 영문 푸터 영역
+.en_footer {
+    height: auto;
+    border-top: 1px solid #c4c2c9;
+
+    .banner-wrap {
+        @include en-margin;
+        height: 150px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .swiper-wrapper {
+            align-items: center;
+
+            .swiper-slide {
+                height: auto;
+
+                img {
+                    object-fit: scale-down;
+                }
+            }
+        }
+
+        .swiper-options {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 100;
+
+            .swiper-pagination {
+                width: 100%;
+                height: 100%;
+
+                .swiper-button-prev {
+                    left: -50px;
+                }
+
+                .swiper-button-next {
+                    right: -50px;
+                }
+            }
+        }
+    }
+
+    .contents {
+        width: 100%;
+        background-color: #061222;
+        padding: 80px 0;
+
+        .inner {
+            @include en-margin;
+        }
+
+        .f_logo {
+            width: 250px;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .company_info {
+            margin-bottom: 50px;
+            display: block;
+
+            li {
+                font-family: $f400;
+                font-size: 16px;
+                line-height: 1.3;
+                color: #fff;
+                display: inline-block;
+                margin-right: 10px;
+
+                &.w100 {
+                    width: 100%;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .copyright {
+            width: 100%;
+            font-family: $f400;
+            font-size: 16px;
+            line-height: 1.3;
+            color: #fff;
+        }
+    }
+}
+
+@include desktop {
+    // 국문 푸터 영역
+    .kr_footer {
+        height: 100%;
+
+        .fot_banner_wrap {
+            padding: 15px;
+
+            .swiper-options {
+                display: none;
+            }
+
+            .fotBannerSwiper {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .contents{
+
+            .top{
+                padding: 10px 0;
+                height: auto;
+
+                .list{
+                    display: grid;
+                    gap: 10px 50px;
+                    grid-template-columns: repeat(3, 1fr);
+
+                    > li {
+                        margin-right: 0;
+
+                        &::after{
+                            display: none;
+                        }
+
+                        > a{
+                            font-size: 14px;
+
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 영문 푸터 영역
+    .en_footer {
+        background-color: #fff;
+
+        .banner-wrap {
+            max-width: 95%;
+            margin: 0 auto;
+
+            .swiper-options{
+                display: none;
+            }
+        }
+
+        .contents {
+
+            .inner {
+                @include inner;
+            }
+        }
+    }
+}
+
+@include tablet {
+    // 국문 푸터 영역
+    .kr_footer {
+
+        .fot_banner_wrap {
+            padding: 5px;
+        }
+
+        .contents{
+
+            .top{
+
+                .list{
+                    gap: 10px 20px;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+
+    // 영문 푸터 영역
+    .en_footer {
+
+        .banner-wrap {
+            height: 100px;
+
+            .swiper-wrapper {
+
+                .swiper-slide {
+                    height: 50%;
+                }
+            }
+        }
+
+        .contents {
+            padding: 40px 0;
+
+            .f_logo {
+                width: 200px;
+                margin-bottom: 30px;
+            }
+
+            .company_info {
+
+                li {
+                    font-size: 13px;
+                }
+            }
+
+            .copyright {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    // 국문 푸터 영역
+    .kr_footer {
+
+        .fot_banner_wrap {
+
+            .fotBannerSwiper {
+
+                .swiper-slide {
+                    height: 45px;
+                }
+            }
+        }
+
+        .contents {
+
+            .top {
+
+                .list {
+                    gap: 5px;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    > li {
+
+                        > a {
+                            font-size: 12px;
+                            word-break: keep-all;
+                        }
+                    }
+                }
+            }
+
+            .bot {
+
+                .topwrap {
+                    justify-content: center;
+
+                    .logo {
+                        width: 180px;
+                    }
+
+                    .telbox {
+                        width: 100%;
+                        padding: 0;
+                        margin: 20px 0 0;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        .title {
+                            margin-bottom: 0;
+                            font-size: 14px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+
+                .botwrap {
+
+                    .list {
+                        justify-content: center;
+
+                        li {
+                            font-size: 12px;
+                            word-break: keep-all;
+
+                            &.w100 {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .copyright {
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // 영문 푸터 영역
+    .en_footer {
+
+        .contents {
+
+            .company_info {
+
+                li {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
